@@ -26,6 +26,9 @@
 	color: white;
 	font-weight: normal;
 	display: flex;
+	@media (min-width: 992px) {
+		padding-top: 250px;
+	}
 	@media (max-width: 991px) {
 		flex-direction: column;
 		justify-content: center;

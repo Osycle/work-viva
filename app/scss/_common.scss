@@ -395,7 +395,7 @@ table {
 	background-position: center;
 }
 .shadow-def{
-	box-shadow: 0 0 20px -4px rgba(black, 0.2);
+	box-shadow: 0 0 16px -3px rgba(black, 0.4);
 }
 .shadow-row{
 	box-shadow: 0 5px 15px -15px rgba(black, 0.8);
@@ -481,7 +481,7 @@ table {
 	padding-right: 5%;
 	padding-left: 5%;
 	//background-color: rgba(black, 0.7);
-	background: linear-gradient(135deg, #06c129, transparent 120%);
+	background: linear-gradient(135deg, $color-1, transparent 120%);
 	background-clip: border-box;
 	@extend .fuller;
 	pointer-events: none;
@@ -799,7 +799,7 @@ table {
 
 .parag-gray{
 	p:not([class*="color"]){
-		color: #1e1e1e;
+		color: #666666;
 	}
 }
 @keyframes bodyanime{
@@ -917,11 +917,10 @@ h1, h2, h3, h4{
 	position: relative;	
 }
 h1{
-	font-size: em(30);
+	font-size: em(36);
 	margin-bottom: 15px;
 	font-weight: 600;
 	line-height: 120%;
-	text-transform: uppercase;
 	@media (max-width: 991px) {
 		font-size: em(26);
 	}
@@ -949,7 +948,7 @@ h4{
 h5{	
 	line-height: 150%;
 	font-weight: 700;
-	font-size: em(15);
+	font-size: em(13);
 }
 
 .h-style-1{
@@ -1007,7 +1006,7 @@ main{
 	p{
     font-style: normal;
 		position: relative;
-		line-height: 150%;
+		line-height: 135%;
 	}
 	ul:not([class]){
 		text-align: left;
