@@ -327,34 +327,13 @@ ul[class*="sub-menu"]{
 	//background-color: $color-1;
 	background-size: 600px;
 	background-position: right;
-	.search-container{
-		padding-left: 15px;
-		padding-right: 15px;
-		.search-container-wrapper{
-			flex-wrap: wrap;
-			margin-top: 10px;
-			margin-bottom: 10px;
-			.btn-def{
-				width: 35%;
-				button{
-					padding-left: 5px;
-					padding-right: 5px;
-				}
-			}
-			input{
-				padding-top: 2px;
-				padding-bottom: 2px;
-			}
-		}
-		.search-nav-content{
-			min-width: 50px;
-			width: 65%;
-		}
+
+	.input-box{
+		right: auto;
+		position: relative;
+		display: block;
 	}
-	.select-content{
-		display: none;
-		width: 40%;
-	}
+
 
 }
 #mm-blocker{
@@ -698,23 +677,6 @@ textarea.form-control{
 
 
 
-.input-icon{
-	position: relative;
-	.fa{
-		font-size: 18px;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		left: 15px;
-		color: $color-gray-3;
-	}
-	.fa-envelope{
-		font-size: 15px;
-	}
-	input{
-		padding-left: 45px;
-	}
-}
 
 .form-def{
 	background-color: $color-3;

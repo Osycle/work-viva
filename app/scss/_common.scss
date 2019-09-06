@@ -1073,71 +1073,29 @@ html{
 	}
 }
 
-.pie-form-control{
-	border: none;
-	border-left: 5px solid #878787;
-	background-color: $color-gray-2;
-	//border-bottom-color: white;
-	&:not([class*='color-']){
-		color: inherit;
-		color: currentColor;
-	}
-	@include placeholder-color(#878787);
-	&:focus, &:active{
-		outline: none;
-	}
-}
 
-input.pie-form-control{
-	height: 50px;
-	padding: 5px 12px;
-	padding-left: 15px;
-	&[type="checkbox"]{
-		height: auto;
-		margin-top: 0;
-	}
-	&:not([class*="box-"]):not([class*="col-"]){
-		width: 100%;
-	}
-	&:focus{
-		border-color: $color-1;
-	}
-}
-textarea.pie-form-control{
-	resize: none;
-	border-color: $color-gray-1;
-	padding: 10px 12px;
-	box-shadow: inset 1px 3px 25px -13px black;
-	min-height: 120px;
-	border-radius: 5px;
-	&:not([class*="box-"]):not([class*="col-"]){
-		width: 100%;
-	}
-}
-select.pie-form-control{
-	height: 35px;
-	padding: 5px 12px;
-	border-color: $color-gray-1;
-	background-color: transparent;
-	&:focus{
-		outline: none;
-	}
-	option{
-		color: black;
-		padding: 30px;
-		font-weight: 600;
-		background-color: transparent;
-	}
-}
+
 .input-content{
 	label{
 		padding-left: 5px;
 		padding-right: 5px;
 	}
 }
-@media (max-width:991px) {
-	textarea.pie-form-control, input.pie-form-control{
-	 	//width: 100%;
+.input-icon{
+	position: relative;
+	.fa{
+		font-size: 18px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 15px;
+		color: $color-gray-3;
+	}
+	.fa-envelope{
+		font-size: 15px;
+	}
+	input{
+		padding-left: 45px;
 	}
 }
 
@@ -1192,14 +1150,6 @@ input[type="radio"]:checked{
 	&:hover{
 		cursor: pointer;
 	}
-	// &:before{
-	// 	@extend .claf;
-	// 	@extend .trans-center;
-	// 	width: 18px;
-	// 	height: 18px;
-	// 	border-radius: 50%;
-	// 	border: 2px solid $color-1;
-	// }
 }
 
 .radio-style-2{

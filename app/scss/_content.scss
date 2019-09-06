@@ -130,8 +130,7 @@ small{
 			@extend .clafclear;
 			width: 85px;
 			height: 2px;
-			background-image: $gradient-1;
-			box-shadow: 0 0 6px 0 $color-1;
+			background-color: $color-1;
 			bottom: 0;
 			@media (min-width: 992px){
 				
@@ -295,6 +294,16 @@ figcaption{
 				width: calc(100% + 80px);
 				z-index: -1;
 			}
+			@media (max-width: 991px){
+				background-color: $color-1;
+				padding-left: 15px;
+				display: block;
+				padding-right: 15px;
+				font-size: 1.4em !important;
+				&:before{
+					display: none;
+				}
+			}
 
 			@media (min-width: 992px) {
 
@@ -312,9 +321,6 @@ figcaption{
 		p, img{
 			transform: translateY(20px);	
 		}
-	}
-	.btn-def{
-
 	}
 	.btn-def, .btn-opacity{
 		transform: scale(1.3);
@@ -370,7 +376,7 @@ figcaption{
 				display: none;
 			}
 			.align-i-center{
-				height: 90vh;
+				height: 250px;
 			}
 		}
 		@media (min-width: 992px) {
@@ -384,6 +390,7 @@ figcaption{
 		background-color: rgba(black, 0.5);
 		//background: linear-gradient(to bottom, transparent, $color-2);
 		@media (max-width: 991px) {
+			display: block;
 			background-color: rgba(black, 0.6);
 		}
 	}
@@ -431,9 +438,9 @@ figcaption{
 			display: none;
 		}
 		figure{
-			height: 100vh;
+			height: 250px;
 			.img{
-				height: 100vh;
+				height: 250px;
 			}
 		}
 		.bg-wrapper{
@@ -648,10 +655,10 @@ figcaption{
 		}
 	}
 	@media (min-width: 992px) {
-		padding-bottom: 300px;
+		padding-bottom: 100px;
 	}
 }
-.short-productions-items{
+.short-productions-items{	
 	.img{
 		height: 340px;
 		background-size: cover;
@@ -695,12 +702,42 @@ figcaption{
 //short-logotypes
 .short-logotypes{
 	height: 0;
-	margin-top: -110px;
+	margin-top: -90px;
+	.border-radius-wrapper{
+		background-color: white;
+		@media (min-width: 992px){
+			border-radius: 0 80px;
+			padding: 20px 70px;
+
+		}
+	}
+	@media (min-width: 992px) {
+		.owl-nav{
+			.owl-prev{
+				margin-left: -50px;
+			}	
+			.owl-next{
+				margin-right: -50px;
+			}	
+		}
+	}
+	@media (max-width: 991px){
+		height: auto;
+		margin-top: 15px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		.owl-nav{
+			position: absolute;
+		}
+	}
 }
 .short-logotypes-items{
-	background-color: white;
 	.img{
-		height: 220px;
+		height: 150px;
 		background-size: contain;
+		background-position: center;
+		@media (max-width: 991px) {
+			height: 200px;
+		}
 	}
 }

@@ -49,7 +49,21 @@
 
 
 
-		$(".certifications-items.owl-carousel").owlCarousel({
+		$(".short-logotypes-items.owl-carousel").owlCarousel({
+			nav: true,
+			//items: 3,
+			dots: false,
+			dotsEach: true,
+			autoplay: true,
+			touchDrag: false,
+			responsive:{
+				0:{items:1},
+				991:{items:5}
+			},
+			navText : owlBtn,
+			margin: 30
+		});
+		/*$(".certifications-items.owl-carousel").owlCarousel({
 			nav: true,
 			//items: 3,
 			dots: false,
@@ -63,7 +77,7 @@
 			navText : owlBtn,
 			margin: 30
 		});
-
+		*/
 		if( $(".owl-nav-style-1").length > 0 ){
 			$(".owl-nav-style-1").map(function( i, el ){
 				$(el).find(".owl-prev").after($(el).find(".owl-dots"));

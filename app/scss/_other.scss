@@ -590,21 +590,18 @@ div.owl-nav{
 	//position: absolute;
 }
 .owl-btn{
-	background-color: #f9f9f9;
+	background-color: transparent;
 	width: 40px;
 	height: 40px;
 	z-index:2;
 	display: inline-block;
-	border: none;
 	display: flex;
 	align-items: center;
-	box-shadow: 0 0 0px $color-1;
+	border: none;
 	&:hover, &:focus{
 		opacity: 1;
 		border: none;
 		cursor: pointer;
-		background: $gradient-1;
-		box-shadow: 1px 1px 6px -1px rgba($color-1, 0.5);
 		.arrow{
 			fill: white;
 		}
@@ -614,28 +611,30 @@ div.owl-nav{
 		fill: $color-1;
 	}
 	svg{
-		filter: drop-shadow(0 0 5px $color-1);
 		width: 50px;
 		display: block;
 		height: 50px;
 		//display: inline-block;
-		transform: scale(0.5);
 	}
 	.arrow{
     transform-origin: 0 0;
 	}
 }
 .owl-btn-2{
+	.owl-nav{
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+		transform: translateY(-50%);
+	}
 	.owl-btn{
-		@extend .owl-btn;
-		border: 1px solid rgba($color-1, 0.5);
+		
 		.arrow{
 			fill: $color-1;
 		}
 		&:hover{
-			background-color: $color-1;
 			.arrow{
-				fill: white;
+				
 			}
 		}
 	}
