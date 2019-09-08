@@ -192,6 +192,20 @@ figcaption{
 	pointer-events: none;
 	//animation: bodyanime 900s linear infinite;
 }
+.bg-about{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/bg/bg-about.jpg');
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: cover;
+	//display: none;
+	z-index: -1;
+	pointer-events: none;
+	//animation: bodyanime 900s linear infinite;
+}
+
 .bg-body{
 	position: absolute;
 	width: 100%;
@@ -216,7 +230,11 @@ figcaption{
 	height: 100%;
 }
 
-
+.overflow-wrapper{
+	overflow: hidden;
+	overflow-y: auto;
+	position: relative;
+}
 
 
 
@@ -552,42 +570,8 @@ figcaption{
 				font-size: em(14);
 			}
 		}
-		&:nth-child(4){
-			a{
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				margin-bottom: 12px;
-				&:hover{
-					.icm{
-						color: $color-1;
-					}
-					.text-link{
-						background-color: $color-1;
-					}
-				}
-			}
-			.icm{
-				font-size: 2em;
-				min-width: 45px;
-				display: inline-block;
-				color: $color-2;
-				transition: all 0.3s ease;
-			}
-			.text-link{
-				background-color: $color-2;
-				transition: all 0.3s ease;
-				height: 100%;
-				font-size: em(12);
-				padding: 10px 15px;
-				display: inline-block;
-				width: 100%;
-				color: white;
-				text-transform: uppercase;
-				font-weight: 600;
-			}
-		}
 	}
+
 	.desc-content{
 		padding: 20px 20px;
 		padding-bottom: 30px;
@@ -613,11 +597,42 @@ figcaption{
 		max-height: 225px;
 	}
 }
-.overflow-wrapper{
-	overflow: hidden;
-	overflow-y: auto;
-	position: relative;
+.stickers-feedback{
+	a{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 12px;
+		&:hover{
+			.icm{
+				color: $color-1;
+			}
+			.text-link{
+				background-color: $color-1;
+			}
+		}
+	}
+	.icm{
+		font-size: 2em;
+		min-width: 45px;
+		display: inline-block;
+		color: $color-2;
+		transition: all 0.3s ease;
+	}
+	.text-link{
+		background-color: $color-2;
+		transition: all 0.3s ease;
+		height: 100%;
+		font-size: em(12);
+		padding: 10px 15px;
+		display: inline-block;
+		width: 100%;
+		color: white;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
 }
+
 .link-style{
 	i{
 		width: 20px;
@@ -739,5 +754,267 @@ figcaption{
 		@media (max-width: 991px) {
 			height: 200px;
 		}
+	}
+}
+
+
+//about
+iframe[align="left"]{
+	margin: 15px 15px 15px 0;
+}
+iframe[align="right"]{
+	margin: 15px 0 15px 15px;
+}
+
+.about{
+	position: relative;
+	overflow: hidden;
+	@media (min-width: 992px) {
+		padding-bottom: 30px;
+	}
+	@media (max-width: 991px) {
+		h1,h2,h3,h4,h5{
+			text-align: center;
+		}
+	}
+	li{
+		color: $color-gray-5;
+	}
+	iframe{
+		display: inline-block;
+		width: 560px;
+		height: 315px;
+		//float: left;
+		@media (max-width: 991px){
+			width: 100%;
+			height: 315px;
+		}
+	}
+}
+
+
+//product
+.product{
+	position: relative;
+	overflow: hidden;
+	.img-content{
+		background-color: white;
+		.img{
+			height: 415px;
+			background-size: 80%;
+		}
+	}
+}
+.product-detail{
+	padding: 30px;
+	background-color: white;
+	
+	@extend .flex-adaptive;
+	h3{
+		&:first-child{
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+	}
+	.boxes-cell{
+		min-width: 50%;
+		@media (min-width: 992px){
+			&:last-child{
+				border-left: 1px solid rgba(black, 0.1);
+				padding-left: 25px;
+			}
+		}
+		li{
+			margin-bottom: 8px;
+		}
+	}
+}
+.product-pricepanel{
+	.product-pricepanel-wrapper{
+		background-color: white;
+		display: flex;
+		align-items: center;
+		height: 40px;
+		justify-content: space-between;
+	}
+	.price{
+		padding: 2px 30px;
+	}
+	.btn-def{
+		height: 100%;
+		text-transform: uppercase;
+		font-size: 1em;
+		.icm{
+			font-size: 20px;
+		}
+		a{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: inherit;
+			padding: 0 30px;
+		}
+	}
+}
+.product-video{
+	.video-content{
+		text-align: center;
+	}
+	iframe{
+		width: 550px;
+		height: 315px;
+		@media (max-width: 991px){
+			width: 100%;
+			height: 250px;
+		}
+	}
+}
+
+
+
+//feedback
+.feedback{
+	.stickers-feedback{
+		margin-top: 15px;
+	}	
+	.stickers-items{
+		@media (min-width: 992px){
+			padding-left: 45px;
+		}
+	}
+}
+.feedback-form{
+	.input-text{
+		min-width: 200px;
+		width: 180px;
+		@media (min-width: 992px){
+			text-align: right;
+			padding-right: 20px;
+		}
+		@media (max-width: 991px){
+			width: 100%;
+			margin-bottom: 5px;
+		}
+	}
+	.input-content{
+		margin-top: 15px;
+		margin-bottom: 15px;
+		input, textarea{
+			border: 1px solid $color-1;
+		}
+	}
+}
+
+
+
+//short-news
+.short-news-items{
+	.img-content{
+		position: relative;
+	}
+	.img{
+		background-position: center;
+		background-size: cover;
+		filter: brightness(85%);
+		transition: all 0.3s ease;
+		height: 228px;
+	}
+	.desc-content{
+		p{
+			font-weight: 400;
+		}
+	}
+	figure{
+		&:hover{
+			.img{
+				filter: brightness(100%);
+			}
+		}
+	}
+}
+
+
+
+
+//.news-article
+.news-article{
+	.article-img{
+		img{
+			width: 100%;
+		}
+	}
+	.column-1{
+		.wrapper{
+			padding: 10px 20px;
+			background-color: $color-gray-2;
+		}
+	}
+	.column-2{
+		.date-content{
+			padding: 5px 10px;
+			background-color: $color-1;
+			color: white;
+			display: inline-block;
+		}
+	}
+	.news-article-items{
+		figure{
+			background-color: white;
+		}
+		.desc-content{
+			padding: 0 15px;
+		}
+		.date-content{
+			margin: 15px 0;
+			color: $color-gray-3;
+			font-size: em(12);
+		}
+		@media (min-width: 991px){
+			.desc-content{
+				padding: 0 30px 1px;
+			}
+		}
+		.img{
+			height: 200px;
+		}
+	}
+}
+.socicons-red{
+	color: $color-1;
+	font-size: 18px;
+	ul{
+		display: flex;
+		@media (max-width: 991px) {
+			justify-content: center;
+		}
+	}
+	li{
+		margin-left: 2px;
+		transition: all 0.3s ease;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		a{
+			width: 100%;
+  		text-align: center;
+		}
+		&:hover{
+			background-color: $color-1;
+			color: white;
+			box-shadow: 0 2px 5px -1px $color-1 ;
+		}
+	}
+	.fa-paper-plane{
+	}
+}
+
+//videoblog
+.videoblog-items{
+	iframe{
+		width: 100%;
+		height: 270px;
 	}
 }

@@ -18,11 +18,11 @@ $font-family-3: sans-serif;
 $color-scroll: $color-1;
 $color-footer: #0071BC;
 
-$color-gray-1: #ededed; //#bdbdbd
+$color-gray-1: #f6f6f6; //#bdbdbd
 $color-gray-2: #f9f9f9;
-$color-gray-3: #868686;
+$color-gray-3: #9b9b9b;
 $color-gray-4: #282828;
-$color-gray-5: #212121;
+$color-gray-5: #1f1f1f;
 
 
 
@@ -149,9 +149,12 @@ $gradient-1: linear-gradient(to bottom right, $color-2, $color-3);
 		padding-left: 15px;
 		li{
 			list-style: none;
-			margin-bottom: 8px;
+			margin-bottom: 5px;
 			list-style-position: outside;
 			list-style-image: url('../img/icons/list-icon.png');
+			@media (min-width: 992px) {
+				padding-left: 15px;
+			}
 		}
 	}
 
@@ -184,6 +187,7 @@ $gradient-1: linear-gradient(to bottom right, $color-2, $color-3);
 		--BREADCRUMP--
 */
 .breadcrumb-container{
+	background-color: $color-gray-1;
 	.lang{
 		padding: 10px 0;
 		margin: 20px 0;
@@ -193,7 +197,6 @@ $gradient-1: linear-gradient(to bottom right, $color-2, $color-3);
 	}
 }
 .breadcrumb{
-	background: transparent;
 	padding: 8px 0;
 	font-size: 0.9em;
 	z-index: 1;
@@ -214,7 +217,7 @@ $gradient-1: linear-gradient(to bottom right, $color-2, $color-3);
 	}
 	a{
 		vertical-align: middle;
-		color: $color-gray-3;
+		color: $color-1;
 	}
 	.active{
 		a{
@@ -1042,10 +1045,11 @@ hr{
   white-space: nowrap;
 }
 .text-item{
-	@extend .parag-gray;
-	line-height: 170%;
+	
 	p{
-		margin-bottom: 15px;
+		line-height: 170%;
+		color: $color-gray-5;
+		margin-bottom: 20px;
 		b{
 			color: black;
 		}
