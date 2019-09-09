@@ -21,7 +21,7 @@ $color-footer: #0071BC;
 $color-gray-1: #f6f6f6; //#bdbdbd
 $color-gray-2: #f9f9f9;
 $color-gray-3: #9b9b9b;
-$color-gray-4: #282828;
+$color-gray-4: #666666;
 $color-gray-5: #1f1f1f;
 
 
@@ -400,6 +400,9 @@ table {
 .shadow-def{
 	box-shadow: 0 0 16px -3px rgba(black, 0.4);
 }
+.shadow-box-1{
+	box-shadow: 0 0 20px -3px rgba(black, 0.1);
+}
 .shadow-row{
 	box-shadow: 0 5px 15px -15px rgba(black, 0.8);
 }
@@ -647,25 +650,27 @@ table {
 
 
 
-.btn-opacity{
+span.btn-opacity{
 	@extend .btn-style;
 	background-color: transparent;
-	border: 1px solid white;
-	color: white;
+	border: 1px solid $color-1;
+	color: $color-1;
 	transition: all 0.3s ease-in-out;
+
 	a{
 		transition: none !important;
 	}
+
 	&:hover{
-		background-color: white;
-		color: black;
+		color: white;
+		background-color: $color-1;
 	}
 	&.reverse{
-		border-color: black;
-		color: black;
+		border-color: white;
+		color: white;
 		&:hover{
-			border-color: white;
-			color: white;
+			border-color: $color-1;
+			color: $color-1;
 		}
 	}
 }
