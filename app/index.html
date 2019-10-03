@@ -810,6 +810,86 @@
 	<!-- SCRIPTS -->
 	<script src="js/scripts.min.js"></script>
 	<script src="js/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUinUZqQAIM1NfbavWbOKtsc3l-XE_ag"></script>
+  <script type="text/javascript">
+  	var mapEls =  document.getElementsByClassName("map-canvas");
+  	var dotsArray = [
+  		{
+  			coordinates: [41.34765, 69.354354343],
+  			description: "<div class='window-content align-center'><p>м. Львов, вул. Мирзо Улугбек, 317</p></div>"
+  		},
+  		{
+  			coordinates: [41.33765, 69.354454343],
+  			description: "<div class='window-content align-center'><p>м. Львов, вул. Мирзо Улугбек, 317</p></div>"
+  		}
+  	];
+  	
+	  if (mapEls.length) {
+	    var map;
+	    function initialize(mapEl, properties) {
+
+	      var mapOptions = {
+	        mapTypeId: google.maps.MapTypeId.ROADMAP,
+	        mapTypeControl: false,
+	        zoom: 15,
+	        zoomControl: true,
+	        zoomControlOptions: {
+	          style: google.maps.ZoomControlStyle.DEFAULT,
+	          position: google.maps.ControlPosition.DEFAULT
+	        },
+	        panControl: true,
+	        panControlOptions: {
+	          position: google.maps.ControlPosition.LEFT_TOP
+	        },
+	        streetViewControl: false,
+	        scaleControl: false,
+	        overviewMapControl: false,
+	        center: new google.maps.LatLng(properties.coordinates[0], properties.coordinates[1])
+	      };
+
+
+
+	      map = new google.maps.Map(mapEl, mapOptions);
+
+	      var marker = new google.maps.Marker({
+	        position: new google.maps.LatLng(properties.coordinates[0], properties.coordinates[1]),
+	        map: map,
+	        icon: "img/icons/map-marker.png",
+	        title: 'marker'
+	      });
+
+	      map.setOptions({
+	        //styles: mapStyles,
+	        disableDefaultUI: true
+	      });
+
+	      var transitLayer = new google.maps.TransitLayer();
+	      transitLayer.setMap(map);
+
+	      var bicyclingLayer = new google.maps.BicyclingLayer();
+	      bicyclingLayer.setMap(map);
+
+	      
+
+	      var infowindow = new google.maps.InfoWindow({
+	        content: properties.description
+	      });
+
+	      google.maps.event.addListener(marker, 'click', function() {
+	        infowindow.open(map, marker);
+	      });
+	      
+	    }
+
+	    for (var i = 0; i < mapEls.length; i++) {
+	    	initialize(mapEls[i], dotsArray[i]);
+	    }
+
+	    //google.maps.event.addDomListener(window, 'load', initialize);
+
+	  }
+
+  </script>
 </body>
 
 </html>

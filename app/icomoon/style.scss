@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?2rh5p1');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?2rh5p1#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?2rh5p1') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?2rh5p1') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?2rh5p1##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?41rxa4');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?41rxa4#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?41rxa4') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?41rxa4') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?41rxa4##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,122 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icm-placeholder-filled-point {
+  &:before {
+    content: $icm-placeholder-filled-point; 
+  }
+}
+.icm-play-button {
+  &:before {
+    content: $icm-play-button; 
+  }
+}
+.icm-product .path1 {
+  &:before {
+    content: $icm-product-path1;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icm-product .path2 {
+  &:before {
+    content: $icm-product-path2;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icm-product .path3 {
+  &:before {
+    content: $icm-product-path3;  
+    margin-left: -1em;  
+    color: rgb(227, 30, 22);
+  }
+}
+.icm-product .path4 {
+  &:before {
+    content: $icm-product-path4;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icm-product .path5 {
+  &:before {
+    content: $icm-product-path5;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icm-right-arrow {
+  &:before {
+    content: $icm-right-arrow; 
+  }
+}
+.icm-rss-symbol {
+  &:before {
+    content: $icm-rss-symbol; 
+  }
+}
+.icm-shopping-cart {
+  &:before {
+    content: $icm-shopping-cart; 
+  }
+}
+.icm-target .path1 {
+  &:before {
+    content: $icm-target-path1;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icm-target .path2 {
+  &:before {
+    content: $icm-target-path2;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icm-target .path3 {
+  &:before {
+    content: $icm-target-path3;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icm-target .path4 {
+  &:before {
+    content: $icm-target-path4;  
+    margin-left: -1em;  
+    color: rgb(227, 30, 22);
+  }
+}
+.icm-telegram {
+  &:before {
+    content: $icm-telegram; 
+  }
+}
+.icm-telephone {
+  &:before {
+    content: $icm-telephone; 
+  }
+}
+.icm-vk {
+  &:before {
+    content: $icm-vk; 
+  }
+}
+.icm-address {
+  &:before {
+    content: $icm-address; 
+  }
+}
+.icm-arrow-pointing-to-right {
+  &:before {
+    content: $icm-arrow-pointing-to-right; 
+  }
+}
+.icm-calendar {
+  &:before {
+    content: $icm-calendar; 
+  }
+}
 .icm-call-answer {
   &:before {
     content: $icm-call-answer; 
@@ -163,120 +279,59 @@
     content: $icm-phone-call; 
   }
 }
-.icm-placeholder-filled-point {
+.icm-box {
   &:before {
-    content: $icm-placeholder-filled-point; 
+    content: $icm-box; 
   }
 }
-.icm-play-button {
+.icm-exit-door {
   &:before {
-    content: $icm-play-button; 
+    content: $icm-exit-door; 
   }
 }
-.icm-product .path1 {
+.icm-eye-open {
   &:before {
-    content: $icm-product-path1;  
-    color: rgb(0, 0, 0);
+    content: $icm-eye-open; 
   }
 }
-.icm-product .path2 {
+.icm-family-tree {
   &:before {
-    content: $icm-product-path2;  
-    margin-left: -1em;  
-    color: rgb(0, 0, 0);
+    content: $icm-family-tree; 
   }
 }
-.icm-product .path3 {
+.icm-icon {
   &:before {
-    content: $icm-product-path3;  
-    margin-left: -1em;  
-    color: rgb(227, 30, 22);
+    content: $icm-icon; 
   }
 }
-.icm-product .path4 {
+.icm-locked-padlock {
   &:before {
-    content: $icm-product-path4;  
-    margin-left: -1em;  
-    color: rgb(0, 0, 0);
+    content: $icm-locked-padlock; 
   }
 }
-.icm-product .path5 {
+.icm-portfolio {
   &:before {
-    content: $icm-product-path5;  
-    margin-left: -1em;  
-    color: rgb(0, 0, 0);
+    content: $icm-portfolio; 
   }
 }
-.icm-right-arrow {
+.icm-premium-badge {
   &:before {
-    content: $icm-right-arrow; 
+    content: $icm-premium-badge; 
   }
 }
-.icm-rss-symbol {
+.icm-settings-gears {
   &:before {
-    content: $icm-rss-symbol; 
+    content: $icm-settings-gears; 
   }
 }
-.icm-shopping-cart {
+.icm-shopping-cart1 {
   &:before {
-    content: $icm-shopping-cart; 
+    content: $icm-shopping-cart1; 
   }
 }
-.icm-target .path1 {
+.icm-wallet-filled-money-tool {
   &:before {
-    content: $icm-target-path1;  
-    color: rgb(0, 0, 0);
-  }
-}
-.icm-target .path2 {
-  &:before {
-    content: $icm-target-path2;  
-    margin-left: -1em;  
-    color: rgb(0, 0, 0);
-  }
-}
-.icm-target .path3 {
-  &:before {
-    content: $icm-target-path3;  
-    margin-left: -1em;  
-    color: rgb(0, 0, 0);
-  }
-}
-.icm-target .path4 {
-  &:before {
-    content: $icm-target-path4;  
-    margin-left: -1em;  
-    color: rgb(227, 30, 22);
-  }
-}
-.icm-telegram {
-  &:before {
-    content: $icm-telegram; 
-  }
-}
-.icm-telephone {
-  &:before {
-    content: $icm-telephone; 
-  }
-}
-.icm-vk {
-  &:before {
-    content: $icm-vk; 
-  }
-}
-.icm-address {
-  &:before {
-    content: $icm-address; 
-  }
-}
-.icm-arrow-pointing-to-right {
-  &:before {
-    content: $icm-arrow-pointing-to-right; 
-  }
-}
-.icm-calendar {
-  &:before {
-    content: $icm-calendar; 
+    content: $icm-wallet-filled-money-tool; 
   }
 }
 
