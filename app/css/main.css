@@ -7398,7 +7398,8 @@ tbody.collapse.in {
 */
 ::-webkit-scrollbar {
   width: 5px;
-  position: absolute; }
+  position: absolute;
+  height: 5px; }
 
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 5px;
@@ -7738,7 +7739,7 @@ table {
 .claf, [data-flicker]:before, .h-style-1:after, .h-style-1:before, .checkbox-style-1:before {
   content: " "; }
 
-.clafclear, .hr-style-1:before, .h1-style-1 h1:not(.no-style):after, .h2-style-1 h2:not(.no-style):before, .footer-menu h2:not(.no-style):before, .bnr-carousel figure h1:before, .short-productions .entry-header h1:before, .short-productions-items h3:before, .products .products-img .desc-content h1:before, .products-items figure:before {
+.clafclear, .hr-style-1:before, .h1-style-1 h1:not(.no-style):after, .h2-style-1 h2:not(.no-style):before, .footer-menu h2:not(.no-style):before, .bnr-carousel figure h1:before, .short-productions .entry-header h1:before, .short-productions-items h3:before, .products .products-img .desc-content h1:before, .products-items figure:before, .sign-bonus .bonus-tooltip:before {
   content: " ";
   height: 100%;
   width: 100%;
@@ -10561,6 +10562,17 @@ iframe[align="right"] {
     .sign-tab .tab-list li a {
       display: block;
       width: 100%; }
+  @media (max-width: 991px) {
+    .sign-tab .tab-list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .sign-tab .tab-list li {
+        text-align: left;
+        -webkit-clip-path: none;
+        clip-path: none; } }
 
 .sign-tab .tab-content {
   margin-top: 30px; }
@@ -10591,7 +10603,8 @@ iframe[align="right"] {
     margin: 0;
     padding-right: 20px; }
   .partners-detail-items .cap-content h4 {
-    font-size: 1.1em; }
+    font-size: 1.1em;
+    text-align: left; }
   .partners-detail-items .cap-content .btn-def {
     height: 100%;
     display: -webkit-box;
@@ -10611,10 +10624,11 @@ iframe[align="right"] {
 .partners-detail-items .desc-content {
   padding: 15px 20px;
   min-height: 150px; }
-  .partners-detail-items .desc-content p {
-    overflow-y: auto;
-    max-height: 120px;
-    margin-bottom: 0; }
+  @media (min-width: 992px) {
+    .partners-detail-items .desc-content p {
+      overflow-y: auto;
+      max-height: 120px;
+      margin-bottom: 0; } }
 
 .partners-detail-items table tbody tr {
   background-color: transparent;
@@ -10627,44 +10641,202 @@ iframe[align="right"] {
 .partners-detail-items .boxes-cell {
   background-color: white; }
 
-.sign-tree .tree-box-td {
+.sign-tree .tb-wrapper {
   -webkit-border-radius: 0;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
   background: white; }
-  .sign-tree .tree-box-td.is-selected {
-    background: rgba(0, 39, 104, 0.2); }
 
 .sign-tree .user {
   position: relative;
   padding: 20px 20px; }
 
-.sign-tree .tree-box-content {
+.sign-tree .tb-content {
   margin-top: 20px; }
-  .sign-tree .tree-box-content h5 {
+  .sign-tree .tb-content h5 {
     font-size: 1.1em;
     font-weight: 700;
     color: #be0a2f; }
-  .sign-tree .tree-box-content p {
+  .sign-tree .tb-content p {
     font-weight: 400; }
 
 .sign-tree .google-visualization-orgchart-node-large {
   font-size: 1em; }
 
 .sign-tree .face {
-  left: 50%;
-  top: 0;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   background-repeat: no-repeat;
-  position: absolute;
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
   width: 60px;
-  height: 60px; }
+  height: 60px;
+  margin: auto; }
+
+.sign-tree .user-name {
+  padding: 10px 15px;
+  background-color: #e7e7e7; }
+  .sign-tree .user-name b, .sign-tree .user-name i, .sign-tree .user-name span {
+    vertical-align: middle; }
+  .sign-tree .user-name b {
+    padding-right: 5px;
+    border-right: 1px solid #d5d5d5;
+    font-weight: 600; }
+
+.chart-content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 100%;
+  overflow-x: auto; }
+
+@media (max-width: 991px) {
+  .left-bar {
+    width: 60px;
+    padding-top: 70px; }
+    .left-bar .entry-header {
+      display: none; }
+    .left-bar li {
+      text-align: center; }
+      .left-bar li span {
+        display: none; }
+      .left-bar li i {
+        margin-right: 0; }
+  .sign-nav {
+    left: 0;
+    width: 100%; }
+    .sign-nav .welcome-user {
+      display: none; }
+    .sign-nav .wrapper {
+      padding-right: 70px;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+  .sign-content {
+    left: 60px;
+    width: -webkit-calc(100% - 60px);
+    width: calc(100% - 60px); } }
+
+.sign-bonus .table-wrapper {
+  max-width: 100%;
+  overflow-x: auto; }
+
+.sign-bonus table {
+  min-width: 360px; }
+  .sign-bonus table thead th {
+    background-color: #e7e7e7;
+    padding: 8px 20px; }
+  .sign-bonus table th:hover .bonus-tooltip, .sign-bonus table td:hover .bonus-tooltip {
+    opacity: 1;
+    pointer-events: auto; }
+  .sign-bonus table tbody td {
+    padding: 8px 20px; }
+    .sign-bonus table tbody td a {
+      text-align: center;
+      display: inline-block;
+      width: 100%; }
+  .sign-bonus table tbody tr:nth-child(odd) td {
+    background-color: white; }
+  .sign-bonus table tbody td:nth-child(even) td {
+    background-color: f4f4f4; }
+
+.sign-bonus .bonus-tooltip {
+  position: absolute;
+  min-width: 250px;
+  background-color: white;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  margin-top: 20px; }
+  .sign-bonus .bonus-tooltip:before {
+    width: 20px;
+    height: 20px;
+    background-color: #002768;
+    top: 0;
+    -webkit-transform: matrix(0.6, 0, 0, 1, 0, 0) rotate(45deg) translateY(-50%);
+    -ms-transform: matrix(0.6, 0, 0, 1, 0, 0) rotate(45deg) translateY(-50%);
+    transform: matrix(0.6, 0, 0, 1, 0, 0) rotate(45deg) translateY(-50%);
+    left: 15px; }
+  .sign-bonus .bonus-tooltip:hover {
+    opacity: 0 !important;
+    pointer-events: none !important; }
+  .sign-bonus .bonus-tooltip .bonus-tooltip-content {
+    padding: 10px 20px;
+    padding-top: 5px; }
+  .sign-bonus .bonus-tooltip h4 {
+    background-color: #002768;
+    color: white;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 1.07143em; }
+  .sign-bonus .bonus-tooltip li {
+    margin-top: 5px;
+    margin-bottom: 5px; }
+
+.sign-bonus .icon-content {
+  width: 60px;
+  display: inline-block;
+  height: 30px;
+  background-color: #be0a2f;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  color: white;
+  font-size: 20px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .sign-bonus .icon-content .icm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: inherit;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .sign-bonus .icon-content:hover {
+    background-color: #002768; }
+
+.sign-edits {
+  padding-bottom: 30px; }
+  .sign-edits .input-content {
+    margin-top: 25px;
+    margin-bottom: 25px; }
+    @media (max-width: 991px) {
+      .sign-edits .input-content .align-center {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .sign-edits .input-content .align-center .label {
+          text-align: center; }
+        .sign-edits .input-content .align-center small {
+          display: none; } }
+    .sign-edits .input-content .label {
+      padding-right: 15px;
+      text-align: right; }
+    .sign-edits .input-content input, .sign-edits .input-content select {
+      width: 100%;
+      height: 35px; }
+    .sign-edits .input-content .select2-container--default .select2-selection--single {
+      background-color: white; }
+    .sign-edits .input-content .input {
+      width: 100%; }
+      .sign-edits .input-content .input small {
+        position: absolute;
+        color: #9b9b9b;
+        font-size: 0.78571em; }
+    .sign-edits .input-content .label {
+      min-width: 150px;
+      font-size: 0.96em; }
 
 /* 
 		_footer.scss

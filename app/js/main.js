@@ -18,6 +18,10 @@
 			setTimeout(function() { AOS.refresh(); }, 1);
 		}
 
+		/* bootstrap tooltip*/		
+		$('[data-toggle="tooltip"]').tooltip({
+			html: true
+		})
 
 		/* SELECT2 */
 		if ( $(".js-select").length )
@@ -190,7 +194,6 @@
 			bnrCarousel.data("flickity");
 
 			$(".bnr-carousel .carousel-items").append("<div class='container-arrows'></div>").find(".container-arrows").append($(".bnr-carousel .carousel-items .flickity-prev-next-button"))
-			//$(".bnr-carousel .container-arrows").append('<button class="flickity-prev-next-button previous" type="button" aria-label="previous"><svg viewBox="0 0 100 100"><path d="M 30,50 L 55,75 L 60,70 L 40,50  L 60,30 L 55,25 Z" class="arrow"></path></svg></button><button class="flickity-prev-next-button next" type="button" aria-label="next"><svg viewBox="0 0 100 100"><path d="M 30,50 L 55,75 L 60,70 L 40,50  L 60,30 L 55,25 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>');
 
 
 
@@ -299,8 +302,6 @@
 			}
 		})
 
-
-		//var scene = $(".product-img");
 		$(".parallax-scene").map(function(i, el){
 			var parallaxInstance = new Parallax(el);
 		})
@@ -341,20 +342,6 @@ var isWebkit = /Webkit/i.test(navigator.userAgent),
 
 // COMMON FUNCTION
 
-setTimeout(function() {
-	//jQuery FUNCITON
-	$.fn.onResized = function() {
-		onResized(function() {
-			this;
-		});
-		return this;
-	};
-}, 10);
-
-document.addEventListener('copy', function(e){
-  e.preventDefault(); // default behaviour is to copy any selected text
-  e.clipboardData.setData('text/plain', '');
-});
 
 
 
